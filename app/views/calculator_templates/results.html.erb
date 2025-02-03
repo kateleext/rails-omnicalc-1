@@ -1,0 +1,15 @@
+<h1><%=params.fetch("operation").capitalize.gsub("_"," ")%> Results </h1>
+<table>
+<tr>
+<%@results.each do |label, value|%>
+<dl>
+  <dt>
+    <%=label%>
+  </dt>
+  <dd>
+    <%=value%>
+  </dd>
+</dl>
+<%end%>
+
+<a href = "/<%=params.fetch("operation")%>/new"><%=@instructions%></a>
